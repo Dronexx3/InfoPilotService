@@ -25,7 +25,7 @@ var loginUserControllerFn = async (req, res) => {
     try {
         result = await userService.loginuserDBService(req.body);
         if (result.status) {
-            res.send({ "status": true, "message": result.msg });
+            res.send({ "status": true, "message": result.msg, "token": result.token });
         } else {
             res.send({ "status": false, "message": result.msg });
         }

@@ -1,6 +1,7 @@
 var userModel = require('./userModel');
 var key = '123456789trytryrtyr';
 var encryptor = require('simple-encryptor')(key);
+const jwt = require('jsonwebtoken');
 
 module.exports.createUserDBService = async (userDetails) => {
     try {
@@ -25,8 +26,10 @@ module.exports.loginuserDBService = async (userDetails) => {
         if (result) {
             const decrypted = encryptor.decrypt(result.password);
             if (decrypted === userDetails.password) {
-                return { status: true, msg: "User Validated Successfully" };
-            } else {
+                const token = createToken(result);
+                return { status: true, msg: "User Validated Successfully", token: token };
+            }
+            else {
                 return { status: false, msg: "User Validation Failed" };
             }
         } else {
@@ -37,3 +40,10 @@ module.exports.loginuserDBService = async (userDetails) => {
         return { status: false, msg: "Invalid Data" };
     }
 };
+
+function createToken(user){
+    const payload = {
+        user_name: user.firstname
+    }
+    return jwt.sign(payload, 'infopilot');
+}
