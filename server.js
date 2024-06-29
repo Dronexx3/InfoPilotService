@@ -10,8 +10,8 @@ const cors = require("cors");
 const AWS = require("aws-sdk");
 AWS.config.update({
   region: "us-east-2",
-  accessKeyId: "ACCESS_KEY_ID",
-  secretAccessKey: "SECRET_ACCESS_KEY",
+  accessKeyId: "ASIA4MTWNJOVVFJNVQM7",
+  secretAccessKey: "VlZ7xqlXWseX8Hl8+fCDvUnwMXW9TxF3hRGnHQah",
 });
 //
 
@@ -32,7 +32,7 @@ async function connectToDatabase() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Conectado exitosamente en MongoDB");
+    console.log("Conectado exitosamente a MongoDB");
   } catch (error) {
     console.log("Error al conectarse a MongoDB:", error);
   }
