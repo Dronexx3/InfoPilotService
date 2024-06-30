@@ -3,11 +3,13 @@ var key = "123456789trytryrtyr";
 var encryptor = require("simple-encryptor")(key);
 const jwt = require("jsonwebtoken");
 
+/*
 // AWS
 var AWS = require("aws-sdk");
 AWS.config.update({ region: "us-east-2" });
 const dynamoDB = new AWS.DynamoDB.DocumentClient();
 //
+*/
 
 module.exports.createUserDBService = async (userDetails) => {
   // Guardar en MongoDB
@@ -21,6 +23,7 @@ module.exports.createUserDBService = async (userDetails) => {
 
     await userModelData.save();
 
+    /*
     // Guardar en DynamoDB
     const params = {
       TableName: "Users",
@@ -38,6 +41,9 @@ module.exports.createUserDBService = async (userDetails) => {
     } catch (error) {
       console.error("Error al guardar usuario en DynamoDB:", error);
     }
+      */
+
+    console.log("User guardado en MongoDB");
 
     return true;
   } catch (error) {
