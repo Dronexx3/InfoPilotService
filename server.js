@@ -6,7 +6,6 @@ var routes = require("./route/routes");
 const cors = require("cors");
 
 // AWS
-
 const AWS = require("aws-sdk");
 AWS.config.update({
   region: "us-east-2",
@@ -15,9 +14,10 @@ AWS.config.update({
 });
 //
 
+// Configuración de CORS
 app.use(
   cors({
-    origin: "http://localhost:8080",
+    origin: "http://localhost", // Permitir solicitudes desde Angular
   })
 );
 
