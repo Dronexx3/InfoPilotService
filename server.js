@@ -19,7 +19,7 @@ AWS.config.update({
 // Configuración de CORS
 app.use(
   cors({
-    origin: "http://localhost", // Permitir solicitudes desde Angular
+    origin: "http://ec2-18-191-147-77.us-east-2.compute.amazonaws.com", // Permitir solicitudes desde Angular
   })
 );
 
@@ -30,7 +30,7 @@ app.listen(9992, function check(err) {
 
 async function connectToDatabase() {
   try {
-    await mongoose.connect("mongodb://localhost:27017/infopilot", {
+    await mongoose.connect("mongodb://ip-172-31-1-248.us-east-2.compute.internal:27017/infopilot", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
