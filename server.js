@@ -19,7 +19,7 @@ AWS.config.update({
 // Configuración de CORS
 app.use(
   cors({
-    origin: "http://ec2-3-145-51-160.us-east-2.compute.amazonaws.com", // Permitir solicitudes desde Angular
+    origin: "http://localhost/", // Permitir solicitudes desde Angular
   })
 );
 
