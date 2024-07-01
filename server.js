@@ -19,13 +19,13 @@ AWS.config.update({
 // Configuración de CORS
 app.use(
   cors({
-    origin: "http://localhost/", // Permitir solicitudes desde Angular
+    origin: "http://localhost:8080", // Permitir solicitudes desde Angular
   })
 );
 
 app.listen(9992, function check(err) {
   if (err) console.log("error");
-  else console.log("started");
+  else console.log("InfoPilotService on port 9992");
 });
 
 async function connectToDatabase() {
