@@ -19,7 +19,7 @@ AWS.config.update({
 // Configuración de CORS
 app.use(
   cors({
-    origin: "http://localhost:8080", // Permitir solicitudes desde Angular
+    origin: "http://3.135.204.14:8080", // Permitir solicitudes desde Angular
   })
 );
 
