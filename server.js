@@ -5,7 +5,7 @@ mongoose.set("strictQuery", false);
 var routes = require("./route/routes");
 const cors = require("cors");
 
-
+/*
 // AWS
 const AWS = require("aws-sdk");
 AWS.config.update({
@@ -14,7 +14,7 @@ AWS.config.update({
   secretAccessKey: "R0kaweoT+4BDtJkpJc6LLv4TxmK+TpAsLBRSNzU9",
 });
 //
-
+*/
 
 // Configuración de CORS
 app.use(
