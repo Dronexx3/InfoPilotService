@@ -10,8 +10,8 @@ const cors = require("cors");
 const AWS = require("aws-sdk");
 AWS.config.update({
   region: "us-east-2",
-  accessKeyId: "ASIA4MTWNJOVVFJNVQM7",
-  secretAccessKey: "VlZ7xqlXWseX8Hl8+fCDvUnwMXW9TxF3hRGnHQah",
+  accessKeyId: "ASIA4MTWNJOVSY4DX7OG",
+  secretAccessKey: "R0kaweoT+4BDtJkpJc6LLv4TxmK+TpAsLBRSNzU9",
 });
 //
 
